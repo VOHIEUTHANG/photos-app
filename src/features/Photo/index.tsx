@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import MainPage from "./pages/Main";
-import AddPhotoPage from "./pages/AddEdit";
-import DetailPage from "./pages/Detail";
+import MainPage from "./pages/MainPage";
+import AddPhotoPage from "./pages/AddPhotoPage";
+import DetailPage from "./pages/PhotoDetailPage";
 import NotFound from "../../components/NotFound";
 
 const Photo = () => {

@@ -86,15 +86,27 @@ const initialPhotos = [
 
 const photo = createSlice({
   name: "photos",
-  initialState: initialPhotos,
+  initialState: [
+    {
+      id: 91176,
+      categoryId: 5,
+      photo: "https://picsum.photos/id/532/300/300",
+      title:
+        "Enim laboris dolore consectetur et fugiat do amet eiusmod anim proident do culpa irure consectetur.",
+    },
+  ],
   reducers: {
     addPhoto: (state: PhotoType[], action: PayloadAction<PhotoType>) => {
       const newPhoto = action.payload;
       state.push(newPhoto);
     },
+    initPhoto: (state: PhotoType[], action: PayloadAction<PhotoType[]>) => {
+      const newPhoto = action.payload;
+      return state.concat(newPhoto);
+    },
   },
 });
 
 const { reducer, actions } = photo;
-export const { addPhoto } = actions;
+export const { addPhoto, initPhoto } = actions;
 export default reducer;

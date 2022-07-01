@@ -6,7 +6,6 @@ import PhotoList from "../components/PhotoList";
 import { Divider, Typography } from "antd";
 const MainPhoto = () => {
   const photos = useSelector((state: RootState) => state.photos);
-  console.log("🚀 ~ file: MainPage.tsx ~ line 7 ~ MainPhoto ~ photos", photos);
   return (
     <div>
       <Banner
